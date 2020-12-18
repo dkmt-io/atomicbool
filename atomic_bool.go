@@ -24,6 +24,11 @@ func (b *atomicBool) Set(v bool) {
 
 // Create create
 func Create(v bool) AtomicBool {
+	return New(v)
+}
+
+// New new
+func New(v bool) AtomicBool {
 	return &atomicBool{
 		value: b2i(v),
 	}
